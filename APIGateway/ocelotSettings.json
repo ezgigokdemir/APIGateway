@@ -1,45 +1,28 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/student",
+      "DownstreamPathTemplate": "/api/user",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 9001
+          "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/student",
+      "UpstreamPathTemplate": "/user",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/api/student/{id}",
+      "DownstreamPathTemplate": "/api/user/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 9001
+          "Port": 5003
         }
       ],
-      "UpstreamPathTemplate": "/student/{id}",
-      "UpstreamHttpMethod": [
-        "Get"
-      ]
-
-    },
-    {
-      "DownstreamPathTemplate": "/api/lesson",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 9002
-        }
-      ],
-      "UpstreamPathTemplate": "/lesson",
-      "UpstreamHttpMethod": [
-        "Get"
-      ]
+      "UpstreamPathTemplate": "/user/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
     }
   ]
 }
